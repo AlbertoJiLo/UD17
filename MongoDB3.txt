@@ -1,0 +1,9 @@
+use store
+
+db.createCollection('store')
+
+db.createCollection('box')
+
+db.store.insertOne({_id:1,lugar:'China Town',capacidad:100})
+
+db.box.insertOne({_id:'48616',contenido:'Arroz para Sushi',valor:20,store:{_id:1}})

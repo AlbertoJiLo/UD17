@@ -1,0 +1,11 @@
+use tecnoshop
+
+db.createCollection('fabicante')
+
+db.createCollection('articulo')
+
+db.fabricante.insertOne({_id:1,nombre:'Juan'})
+
+db.fabricante.insertOne({_id:2,nombre:'Pepe'})
+
+db.articulo.insertOne({_id:1,nombre:'Auriculares RTX',precio:20,fabricante:{$id:1}});

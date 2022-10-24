@@ -1,0 +1,17 @@
+use investigadores
+
+db.createCollection('facultad')
+
+db.createCollection('investigadores')
+
+db.createCollection('equipos')
+
+db.createCollection('reserva')
+
+db.facultad.insertOne({_id:1,nombre:'Oxford'})
+
+db.investigadores.insertOne({_dni:'23821573P',nomapels:'Sheldon Cooper',facultad:{$id:1}})
+
+db.equipos.insertOne({_numserie:'6820',nombre:'Frequency',facultad:{$id:1}})
+
+db.reserva.insertOne({_dni:{$id:'23821573P'},_numserie:{$id:'6820'},comienzo:'2:13', fin:'00:12'})

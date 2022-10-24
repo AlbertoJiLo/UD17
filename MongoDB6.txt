@@ -1,0 +1,13 @@
+use pieces
+
+db.createCollection('piece')
+
+db.createCollection('proveedor')
+
+db.createCollection('suministra')
+
+db.piece.insertOne({_id:1,nombre:'Tornillo'})
+
+db.proveedor.insertOne({_id:'0489',nombre:'Pablo Alvoran'})
+
+db.suministra.insertOne({_pieza:{$id:1},_proveedor:{$id:'0489'},precio:3})
