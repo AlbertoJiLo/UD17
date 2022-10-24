@@ -1,0 +1,7 @@
+use loscientificos
+db.createCollection('cientificos');
+db.createCollection('asignado_a');
+db.createCollection('proyecto');
+db.cientificos.insertMany([{_id:'45804986v',nombre:'Benji Price'},{_id:'75889402W', nombre:'Oliver Atom'},{_id:'58998754W', nombre:'Mark Lenders'}])
+db.proyecto.insertOne({_id:1, nombre:'Chute con efecto', horas:10})
+db.asignado_a.insertOne({cientifico:{dni:'48102588V'},proyecto:{id:1}})

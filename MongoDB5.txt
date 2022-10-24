@@ -1,0 +1,6 @@
+use losdirectores
+db.createCollection('despachos');
+db.createCollection('directores');
+db.despachos.insertOne({_numero:1,capacidad:100})
+db.directores.insertOne({_dni:'475884772',nomapels:'Pedro Sanchez', despacho:{numero:1}})
+db.directores.insertOne({_dni:'55684598',nomapels:'Margarita Robles',dnijefe:{dni:'475884772'}, despacho:{numero:1}})
