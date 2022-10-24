@@ -1,0 +1,5 @@
+use empleados
+db.createCollection('empleados');
+db.createCollection('departamentos');
+db.departamentos.insertOne({_id:1,nombre:'RRHH',presupuesto:10000})
+db.empleados.insertOne({_dni:1,nombre:'Pepe',apellido:'Viñuela',departamento:{id:1}})
