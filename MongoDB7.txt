@@ -1,0 +1,9 @@
+use losgrandesalmacenes
+db.createCollection('cajeros');
+db.createCollection('productos');
+db.createCollection('venta');
+db.createCollection('maquinas_registradoras');
+db.productos.insertOne({_id:1,nombre:'manzanas',precio:2})
+db.cajeros.insertOne({_id:1,nombre:'Ash Ketchum'})
+db.maquinas_registradoras.insertOne({_id:1,piso:1})
+db.venta.insertOne({cajero:{id:1}, maquina:{id:1}, producto: {id:1}})

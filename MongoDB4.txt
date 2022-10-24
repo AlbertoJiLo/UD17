@@ -1,0 +1,5 @@
+use peliculasysalas
+db.createCollection('peliculas');
+db.createCollection('salas');
+db.peliculas.insertOne({_id:1,nombre:'Ironman',calificacionedad:7})
+db.salas.insertOne({_id:1,nombre:'Sala 1',pelicula:{id:1}})
